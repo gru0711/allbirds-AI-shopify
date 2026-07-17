@@ -1,0 +1,8 @@
+{
+  "memory": true,
+  "user": "fezza",
+  "password": "jessy",
+  "dns": "database",
+  "port": "27017",
+  "name": "allbirds-test"
+}

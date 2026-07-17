@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Poppins;
+}
+img{    
+    width: 100%;
+}
+hr{
+    opacity: 0.6;
+}
+button{
+    transition: 200ms ease;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 1.5em;
+    width:100%;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 9%) 0px 2px 24px 0px;
+    z-index: 1;
+    position: fixed;
+}
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    display: none;
+}
+.hamburger > *{
+    height: 3px;
+    width: 18px;
+    background-color: black;
+    border-radius: 60px;
+}
+.navbar__middle{
+    width: 7.5rem;
+    margin-left: 12em;
+}
+.navbar__item{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 550;
+}
+.navbar > .navbar__item > ul,.navbar__sub-item > ul{
+    display: flex;
+}
+.navbar > .navbar__item > ul > li,.navbar__sub-item > ul > li{
+    list-style: none;
+    padding: 0 1.5em;
+}
+.navbar > .navbar__left > ul > li:hover, .navbar > .navbar__last > .navbar__sub-item > ul > li:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* This hover effect is not working because of position: fixed */
+.navbar__sub-item > ul{
+    margin-right: 0;
+}
+.icons__images{
+    width: 2rem;
+    margin: 0.2em;
+    height: 2em;
+}
+.first-section > .first-section__overlay{
+    position: relative;
+    /* z-index: 1; */
+}
+.first-section >img{
+    position: absolute;
+    z-index: -1;
+    height: 100vh;  /*This makes the img to fit screen size */
+    object-fit: cover;
+}
+.first-section {
+    height: 100vh; /*This height brings content down*/
+}
+.first-section__overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: flex-start;
+    height: 85%;
+    padding-inline:4.9em;
+    color: white;
+    gap: .5em;
+}
+.first-section__overlay > h1{
+    font-size: 50px;
+}
+.first-section__overlay > p{
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.first-section__overlay > .first-section__buttons >button {
+    width: fit-content;
+    padding: 1em 3em;
+    margin-right: 2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 0;
+}
+.first-section__overlay > .first-section__buttons >button:hover{
+    background-color: rgb(36 46 51);
+    color: white;
+    border: none;
+    transition: 200ms ease;
+}
+.card > h1{
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 550;
+    display: flex;
+    padding: .5em;
+    justify-content: center;    
+}
+.card > .card__text{
+    display: flex;
+    gap: 8em;
+    padding: .8em 1.8em;
+    width: 100%;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.card > hr{
+    opacity: 0.7;
+    width: 78%;
+    margin: 0 auto;
+}
+.card > .card__content{
+    display: flex;
+    justify-content: space-between;
+    width: 82%;
+    padding: .8em 1.8em;
+    gap: 1.3em;
+    margin: 0 auto;
+}
+.card__content-inner > div > img{
+    width: 10%;
+}
+.card__content-inner{
+    width: 89%;
+    margin: 0 auto;
+}
+.card__content-inner > p{
+    font-weight: bold;
+    font-size: 134%;
+    padding: 0.3em;  
+}
+.card__content-inner > div{
+    padding: 0.6em 0;
+    gap: 0.5em;
+    font-size: 15px;
+}
+.card__content-item{
+    box-shadow: 1px 7px 4px 7px rgba(203, 202, 202, 0.2);
+}
+.card__duplicate > h1{
+    justify-content:flex-start;
+    padding-left:11%;
+}
+.card__duplicate > .card__duplicate__content{
+    width:82%; 
+    justify-content: space-between; 
+    gap: 1.3em; 
+    display: flex;
+}
+.card__duplicate > div > .card__duplicate-inner{
+    width: 33%;
+}
+@media screen and (max-width: 768px){
+    .navbar__left, .navbar__last > .navbar__sub-item, .navbar__last > .navbar__icons > .icons__images {
+        display: none;
+    }
+    .navbar__middle{
+        margin: 0 auto;
+    }
+    .first-section > .first-section__overlay{
+        padding: 0 19px;
+    }
+    .first-section > div > h1{ 
+        font-size: 32px;
+    }
+    .first-section > div > p{
+        font-size: 14px;
+    }
+    .first-section > div > .first-section__buttons > button{
+        padding: 13px 15px;
+        letter-spacing: 1;
+        font-size:14px;
+        gap: 2em;
+    }
+    .card{
+        margin-top: 3em;
+    }
+    .card > .card__text > p:last-child{
+        display: none;
+    }
+    .card > .card__text{
+        font-size: 13px;
+        gap: 2em;
+    }
+    .card > div + hr{
+        width: 100%;
+    }
+    .card > div > .card2, .card > div > .card3{
+        display: none;
+    }
+    .card > .card__content{
+        width: 93%;
+    }
+    .hamburger{
+        display: flex;
+    }
+    .card__duplicate{
+        margin-top: 18%;
+    }
+    .card__duplicate > div > .card__duplicate-inner{
+        width: 100%;
+    }
+    .card__duplicate > h1{
+        font-size: 25px;
+        margin-top: 2%;
+    }
+}
+.boxOne{
+    margin-top: 6%;
+}
+.boxOne > img{
+    height: 80vh;
+    /* to add different pics */
+    object-fit: cover;
+    top:0;left: 0;
+    width: 100%;
+}
+.boxOne > .boxOne__content{
+    display: flex;
+    width: 42%;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 3% auto;
+}
+.boxOne > div > h1{
+    font-weight: 600;
+}
+.boxOne > div > p{
+    margin-top: 3%;
+}
+.boxOne > div > .boxOne__buttons { 
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.boxOne > div > .boxOne__buttons > button {
+    padding: 13px 18px;
+    letter-spacing: 2px;
+    font-weight: 702;
+    color:white;
+    background-color: #212a2f;
+    width: 30%;
+}
+.boxOne > div > .boxOne__buttons > button:hover{
+    color: black;
+    border: 1px solid;
+    background-color: white;
+}
+@media screen and (max-width: 440px){
+    .boxOne > .boxOne__content{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .boxOne > div > h1{
+        margin-top: 3%;
+        font-size: 28px;
+    }
+    .boxOne > div > .boxOne__buttons{
+        padding: 0;
+        margin-top: 5%;
+        border-radius: 3px;
+        gap: 1em;
+    }
+    .boxOne > div > .boxOne__buttons > button{
+        width: 100%;
+        padding: 11px 8px;
+    }
+}

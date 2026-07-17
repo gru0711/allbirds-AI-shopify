@@ -1,0 +1,32 @@
+{
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "printWidth": 80,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "importOrderParserPlugins": ["jsx", "typescript"],
+  "importOrder": [
+    "<BUILT_IN_MODULES>",
+    "^react$",
+    "^react-dom$",
+    "^react-router-dom$",
+    "^@tanstack/react-query$",
+    "redux",
+    "react",
+    "devtools",
+    "<THIRD_PARTY_MODULES>",
+    "hook",
+    ".component$",
+    ".query$",
+    ".util$",
+    ".json$",
+    "<TYPES>",
+    "<TYPES>^[@.]"
+  ]
+}

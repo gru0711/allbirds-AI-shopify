@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: GeoGraph;
+    font-weight: 400;
+    src: url(@/assets/fonts/geograph-regular.woff2) format('woff');
+  }
+
+  @font-face {
+    font-family: GeoGraph;
+    font-weight: 500;
+    src: url(@/assets/fonts/geograph-medium.woff2) format('woff');
+  }
+
+  @font-face {
+    font-family: GeoGraph;
+    font-weight: 700;
+    src: url(@/assets/fonts/geograph-bold.woff2) format('woff');
+  }
+
+  a,
+  button {
+    @apply focus:outline-0;
+  }
+}
+
+@layer components {
+  .contain {
+    @apply mx-auto px-6;
+  }
+
+  .header-nav {
+    @apply grid min-h-[42px] min-w-[42px] cursor-pointer place-items-center text-[9.4px] font-bold uppercase leading-[1.75px] tracking-[1.4px] hover:underline;
+  }
+
+  .allbirds-font {
+    @apply text-[12.7px] font-bold uppercase leading-[1.5] tracking-[2px];
+  }
+
+  .dropdown-mobile {
+    @apply allbirds-font px-7 py-4 text-[9px];
+  }
+}
+
+@keyframes scaling {
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+}
+
+@keyframes fade {
+  0% {
+    @apply opacity-0;
+  }
+  100% {
+    @apply opacity-75;
+  }
+}
